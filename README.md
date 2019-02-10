@@ -1,5 +1,11 @@
 # React-Doer. Built with Create React App, Material-UI, TypeScript, Redux and Routing
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2bbf6534-7165-4d40-955c-f4ba144dfc7f/deploy-status)](https://app.netlify.com/sites/react-doer/deploys)
+[![Build Status](https://travis-ci.org/jsdevtom/react-doer.svg?branch=master)](https://travis-ci.org/jsdevtom/react-doer)
+
+
+### [Live Demo](https://react-doer.netlify.com/)
+
 <img width="100%" src="screenshot.png" alt="example"/>
 
 Inspired by:
