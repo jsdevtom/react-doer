@@ -1,4 +1,4 @@
-# Create React App example with Material-UI, TypeScript, Redux and Routing
+# React-Doer. Built with Create React App, Material-UI, TypeScript, Redux and Routing
 
 <img width="100%" src="screenshot.png" alt="example"/>
 
