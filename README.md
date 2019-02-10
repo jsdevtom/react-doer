@@ -31,7 +31,7 @@ Inspired by:
 Download or clone this repo
 
 ```bash
-git clone https://github.com/innFactory/create-react-app-material-typescript-redux
+git clone https://github.com/jsdevtom/create-react-app-material-typescript-redux
 cd create-react-app-material-typescript-redux
 ```
 
@@ -59,5 +59,6 @@ This example demonstrate how you can use [Create React App](https://github.com/f
 ## Contributors
 
 * [Anton Spöck](https://github.com/spoeck)
+* [jsdevtom](https://github.com/jsdevtom)
 
 Powered by [innFactory](https://innfactory.de/)

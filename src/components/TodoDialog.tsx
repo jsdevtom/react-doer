@@ -1,4 +1,14 @@
-import { Button, createStyles, Dialog, DialogActions, DialogTitle, TextField, Theme, WithStyles, withStyles } from '@material-ui/core';
+import {
+    Button,
+    createStyles,
+    Dialog,
+    DialogActions,
+    DialogTitle,
+    TextField,
+    Theme,
+    WithStyles,
+    withStyles
+} from '@material-ui/core';
 import * as React from 'react';
 import * as TodoActions from '../actions/todo';
 
@@ -22,21 +32,28 @@ class TodoDialog extends React.Component<TodoDialog.Props> {
 
     static getDerivedStateFromProps(nextProps: Readonly<TodoDialog.Props>, prevState: Readonly<TodoDialog.State>) {
         // return new state
-        return { open: nextProps.open, newTodoText: prevState.newTodoText };
+        return {open: nextProps.open, newTodoText: prevState.newTodoText};
     }
 
     handleClose = () => {
-        this.props.actions.addTodo({ id: Math.random(), completed: false, text: this.state.newTodoText });
+        this.props.actions.addTodo(
+            {
+                id: Math.random(),
+                completed: false,
+                isBeingEdited: false,
+                text: this.state.newTodoText,
+            }
+        );
         this.props.onClose();
 
         // reset todo text if user reopens the dialog
-        this.setState({ newTodoText: '' });
+        this.setState({newTodoText: ''});
     };
 
     handleChange = (name: string) => (event: any) => {
         this.setState({
-            newTodoText: event.target.value,
-        });
+                          newTodoText: event.target.value,
+                      });
     };
 
     render() {
@@ -54,7 +71,7 @@ class TodoDialog extends React.Component<TodoDialog.Props> {
                 <DialogActions>
                     <Button color="primary" onClick={this.handleClose}>
                         OK
-            </Button>
+                    </Button>
                 </DialogActions>
             </Dialog>
         );
@@ -62,10 +79,10 @@ class TodoDialog extends React.Component<TodoDialog.Props> {
 }
 
 const styles = (theme: Theme) => createStyles({
-    textField: {
-        width: '80%',
-        margin: 20
-    }
-});
+                                                  textField: {
+                                                      width: '80%',
+                                                      margin: 20
+                                                  }
+                                              });
 
 export default withStyles(styles)(TodoDialog);
