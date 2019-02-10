@@ -29,7 +29,7 @@
     "@types/webpack-env": "1.13.7",
     "csstype": "2.6.2",
     "redux-devtools-extension": "2.13.8",
-    "typescript": ""
+    "typescript": "3.3.3"
   },
   "scripts": {
     "start": "react-scripts-ts start",
