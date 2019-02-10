@@ -9,7 +9,7 @@ import { Route, RouteComponentProps } from 'react-router';
 import { Todo } from './model/model';
 import HomePage from './pages/HomePage';
 import TodoPage from './pages/TodoPage';
-import { RootState } from './reducers/index';
+import { RootState } from './reducers';
 import { isSmartphone } from './responsive';
 import withRoot from './withRoot';
 import { history } from './configureStore';
@@ -122,7 +122,7 @@ class App extends React.Component<App.Props, App.State> {
     }
 
     renderTodoIcon() {
-        let uncompletedTodos = this.props.todoList.filter(t => t.completed === false);
+        const uncompletedTodos = this.props.todoList.filter(t => !t.completed);
 
         if (uncompletedTodos.length > 0) {
             return (

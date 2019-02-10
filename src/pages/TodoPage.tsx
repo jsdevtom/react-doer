@@ -8,7 +8,7 @@ import * as TodoActions from '../actions/todo';
 import TodoTable from '../components';
 import TodoDialog from '../components/TodoDialog';
 import { Todo } from '../model/model';
-import { RootState } from '../reducers/index';
+import { RootState } from '../reducers';
 import { isSmartphone } from '../responsive';
 
 export namespace TodoPage {
@@ -53,7 +53,7 @@ class TodoPage extends React.Component<TodoPage.Props, TodoPage.State> {
         </Button>
         </Grid>
         <Grid item xs={12}>
-          <TodoTable todoList={todoList} actions={actions} />
+          <TodoTable todoList={todoList} actions={actions}/>
         </Grid>
       </Grid>
     );

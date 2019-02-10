@@ -1,4 +1,4 @@
-import { Action, ActionType, Todo } from '../model/model';
+import { Action, ActionType, EditTodoTextPayload, Todo } from '../model/model';
 
 export function addTodo(todo: Todo): Action<Todo> {
 
@@ -8,10 +8,8 @@ export function addTodo(todo: Todo): Action<Todo> {
     };
 }
 
-// Async Function expample with redux-thunk
+// TODO-Tom: Add Effect here.
 export function completeTodo(todoId: number) {
-
-    // here you could do API eg
 
     return (dispatch: Function, getState: Function) => {
 
@@ -24,6 +22,23 @@ export function uncompleteTodo(todoId: number): Action<number> {
     return {
         type: ActionType.UNCOMPLETE_TODO,
         payload: todoId
+    };
+}
+
+export function makeTodoEditable(todoId: number): Action<number> {
+    return {
+        type: ActionType.MAKE_TODO_EDITABLE,
+        payload: todoId,
+    };
+}
+
+export function editTodoText(todoId: number, updatedTodoText: string): Action<EditTodoTextPayload> {
+    return {
+        type: ActionType.EDIT_TODO_TEXT,
+        payload: {
+            todoId,
+            updatedTodoText,
+        },
     };
 }
 
